@@ -3,7 +3,7 @@ import { AddExpense, ExpenseList, Filter } from "../features/expense";
 
 export default function Expense() {
   return (
-    <Container size="xl" pos={"relative"}>
+    <Container size="xl">
       <Stack gap="lg">
         <div>
           <Title order={2}>Expenses</Title>

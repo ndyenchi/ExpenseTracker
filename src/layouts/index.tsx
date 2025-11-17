@@ -41,7 +41,7 @@ export function AppLayout() {
         </AppShell.Section>
       </AppShell.Navbar>
 
-      <AppShell.Main>
+      <AppShell.Main pos={"relative"}>
         <Outlet />
       </AppShell.Main>
     </AppShell>
