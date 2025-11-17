@@ -15,7 +15,7 @@ import { DatePickerInput } from "@mantine/dates";
 import { IconPlus, IconCalendar } from "@tabler/icons-react";
 import { EXPENSE_CATEGORIES } from "../types/expense";
 
-export function AddExpense() {
+export default function AddExpense() {
   return (
     <Container size="sm">
       <Stack gap="lg">

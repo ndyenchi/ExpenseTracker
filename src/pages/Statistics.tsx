@@ -8,19 +8,27 @@ import {
   Group,
   List,
   ThemeIcon,
-} from '@mantine/core';
-import { PieChart } from '@mantine/charts';
-import { IconTrophy, IconChartPie } from '@tabler/icons-react';
-import { CATEGORY_COLORS } from '../types/expense';
+} from "@mantine/core";
+import { PieChart } from "@mantine/charts";
+import { IconTrophy, IconChartPie } from "@tabler/icons-react";
+import { CATEGORY_COLORS } from "../types/expense";
 
-export function Statistics() {
+export default function Statistics() {
   // Placeholder data - will be connected to actual expense data
   const pieData = [
-    { name: 'Food & Drinks', value: 0, color: CATEGORY_COLORS['Food & Drinks'] },
-    { name: 'Transportation', value: 0, color: CATEGORY_COLORS['Transportation'] },
-    { name: 'Shopping', value: 0, color: CATEGORY_COLORS['Shopping'] },
-    { name: 'Bills', value: 0, color: CATEGORY_COLORS['Bills'] },
-    { name: 'Others', value: 0, color: CATEGORY_COLORS['Others'] },
+    {
+      name: "Food & Drinks",
+      value: 0,
+      color: CATEGORY_COLORS["Food & Drinks"],
+    },
+    {
+      name: "Transportation",
+      value: 0,
+      color: CATEGORY_COLORS["Transportation"],
+    },
+    { name: "Shopping", value: 0, color: CATEGORY_COLORS["Shopping"] },
+    { name: "Bills", value: 0, color: CATEGORY_COLORS["Bills"] },
+    { name: "Others", value: 0, color: CATEGORY_COLORS["Others"] },
   ];
 
   return (

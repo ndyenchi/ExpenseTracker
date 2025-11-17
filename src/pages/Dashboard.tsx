@@ -8,15 +8,15 @@ import {
   RingProgress,
   Stack,
   ThemeIcon,
-} from '@mantine/core';
+} from "@mantine/core";
 import {
   IconCash,
   IconReceipt,
   IconTrendingUp,
   IconCategory,
-} from '@tabler/icons-react';
+} from "@tabler/icons-react";
 
-export function Dashboard() {
+export default function Dashboard() {
   return (
     <Container size="lg">
       <Stack gap="lg">
@@ -115,9 +115,7 @@ export function Dashboard() {
                 size={200}
                 thickness={20}
                 roundCaps
-                sections={[
-                  { value: 0, color: 'gray' },
-                ]}
+                sections={[{ value: 0, color: "gray" }]}
                 label={
                   <Text ta="center" size="sm" c="dimmed">
                     No data yet

@@ -8,16 +8,12 @@ import {
   Select,
   Group,
   Table,
-} from '@mantine/core';
-import { MonthPickerInput } from '@mantine/dates';
-import {
-  IconSearch,
-  IconFilter,
-  IconCalendar,
-} from '@tabler/icons-react';
-import { EXPENSE_CATEGORIES } from '../types/expense';
+} from "@mantine/core";
+import { MonthPickerInput } from "@mantine/dates";
+import { IconSearch, IconFilter, IconCalendar } from "@tabler/icons-react";
+import { EXPENSE_CATEGORIES } from "../types/expense";
 
-export function ExpenseList() {
+export default function ExpenseList() {
   return (
     <Container size="lg">
       <Stack gap="lg">
@@ -39,7 +35,7 @@ export function ExpenseList() {
               <Select
                 placeholder="All categories"
                 leftSection={<IconFilter size={18} />}
-                data={['All', ...EXPENSE_CATEGORIES]}
+                data={["All", ...EXPENSE_CATEGORIES]}
                 size="md"
                 clearable
               />
@@ -61,7 +57,7 @@ export function ExpenseList() {
                   <Table.Th>Date</Table.Th>
                   <Table.Th>Title</Table.Th>
                   <Table.Th>Category</Table.Th>
-                  <Table.Th style={{ textAlign: 'right' }}>Amount</Table.Th>
+                  <Table.Th style={{ textAlign: "right" }}>Amount</Table.Th>
                   <Table.Th style={{ width: 50 }}>Actions</Table.Th>
                 </Table.Tr>
               </Table.Thead>
