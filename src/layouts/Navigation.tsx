@@ -1,10 +1,9 @@
-import { IconHome, IconPlus, IconList, IconChartPie } from "@tabler/icons-react";
-import { Link, useLocation } from "react-router-dom";
 import { NavLink } from "@mantine/core";
+import { IconChartPie, IconHome, IconList } from "@tabler/icons-react";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   { icon: IconHome, label: "Dashboard", to: "/" },
-  { icon: IconPlus, label: "Add Expense", to: "/add" },
   { icon: IconList, label: "Expenses", to: "/expenses" },
   { icon: IconChartPie, label: "Statistics", to: "/stats" },
 ];

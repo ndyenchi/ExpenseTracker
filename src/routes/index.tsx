@@ -3,8 +3,7 @@ import { Route } from "react-router-dom";
 import { AppLayout } from "../layouts";
 
 const Dashboard = lazy(() => import("../pages/Dashboard"));
-const AddExpense = lazy(() => import("../pages/AddExpense"));
-const ExpenseList = lazy(() => import("../pages/ExpenseList"));
+const Expense = lazy(() => import("../pages/Expense"));
 const Statistics = lazy(() => import("../pages/Statistics"));
 
 interface RouteConfig {
@@ -19,8 +18,7 @@ export const routes: RouteConfig = {
   element: <AppLayout />,
   children: [
     { index: true, element: <Dashboard /> },
-    { path: "add", element: <AddExpense /> },
-    { path: "expenses", element: <ExpenseList /> },
+    { path: "expenses", element: <Expense /> },
     { path: "stats", element: <Statistics /> },
   ],
 };

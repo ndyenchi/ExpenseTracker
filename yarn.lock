@@ -698,6 +698,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/form@npm:^8.3.8":
+  version: 8.3.8
+  resolution: "@mantine/form@npm:8.3.8"
+  dependencies:
+    fast-deep-equal: "npm:^3.1.3"
+    klona: "npm:^2.0.6"
+  peerDependencies:
+    react: ^18.x || ^19.x
+  checksum: 10c0/c59aa5047d6eef98b4a84199a5a0d2e877b60222d562dfb3f7536291a7f8d263ebfcee139a5864fedc255bcdfca129de639fdfe69d1a34a31ac9d849605d8eaa
+  languageName: node
+  linkType: hard
+
 "@mantine/hooks@npm:^8.3.8":
   version: 8.3.8
   resolution: "@mantine/hooks@npm:8.3.8"
@@ -2654,6 +2666,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"klona@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "klona@npm:2.0.6"
+  checksum: 10c0/94eed2c6c2ce99f409df9186a96340558897b3e62a85afdc1ee39103954d2ebe1c1c4e9fe2b0952771771fa96d70055ede8b27962a7021406374fdb695fd4d01
+  languageName: node
+  linkType: hard
+
 "levn@npm:^0.4.1":
   version: 0.4.1
   resolution: "levn@npm:0.4.1"
@@ -2966,6 +2985,7 @@ __metadata:
     "@mantine/charts": "npm:^8.3.8"
     "@mantine/core": "npm:^8.3.8"
     "@mantine/dates": "npm:^8.3.8"
+    "@mantine/form": "npm:^8.3.8"
     "@mantine/hooks": "npm:^8.3.8"
     "@tabler/icons-react": "npm:^3.35.0"
     "@types/node": "npm:^24.10.0"
