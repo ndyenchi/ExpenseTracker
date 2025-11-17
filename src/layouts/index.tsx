@@ -1,10 +1,11 @@
 import { AppShell, Burger, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Outlet } from "react-router-dom";
-import { Profile } from "../components/Profile";
+import { Profile } from "./Profile";
 import { Logo } from "./Logo";
 import { ModeToggle } from "./ModeToggle";
 import { Navigation } from "./Navigation";
+import classes from "./index.module.scss";
 
 export function AppLayout() {
   const [opened, { toggle, close }] = useDisclosure();
@@ -35,7 +36,7 @@ export function AppLayout() {
         <AppShell.Section grow>
           <Navigation close={close} />
         </AppShell.Section>
-        <AppShell.Section className="">
+        <AppShell.Section className={classes.profileContainer}>
           <Profile />
         </AppShell.Section>
       </AppShell.Navbar>
