@@ -1,6 +1,6 @@
 import { lazy } from "react";
-import { AppLayout } from "../components/AppLayout";
 import { Route } from "react-router-dom";
+import { AppLayout } from "../layouts";
 
 const Dashboard = lazy(() => import("../pages/Dashboard"));
 const AddExpense = lazy(() => import("../pages/AddExpense"));
