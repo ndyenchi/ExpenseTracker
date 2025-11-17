@@ -1,9 +1,4 @@
-export type ExpenseCategory =
-  | 'Food & Drinks'
-  | 'Transportation'
-  | 'Shopping'
-  | 'Bills'
-  | 'Others';
+export type ExpenseCategory = "Food & Drinks" | "Transportation" | "Shopping" | "Bills" | "Others";
 
 export interface Expense {
   id: string;
@@ -31,17 +26,17 @@ export interface ExpenseStats {
 }
 
 export const EXPENSE_CATEGORIES: ExpenseCategory[] = [
-  'Food & Drinks',
-  'Transportation',
-  'Shopping',
-  'Bills',
-  'Others',
+  "Food & Drinks",
+  "Transportation",
+  "Shopping",
+  "Bills",
+  "Others",
 ];
 
 export const CATEGORY_COLORS: Record<ExpenseCategory, string> = {
-  'Food & Drinks': '#FF6B6B',
-  'Transportation': '#4ECDC4',
-  'Shopping': '#45B7D1',
-  'Bills': '#96CEB4',
-  'Others': '#DDA0DD',
+  "Food & Drinks": "#FF6B6B",
+  Transportation: "#4ECDC4",
+  Shopping: "#45B7D1",
+  Bills: "#96CEB4",
+  Others: "#DDA0DD",
 };

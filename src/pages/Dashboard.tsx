@@ -9,12 +9,7 @@ import {
   Stack,
   ThemeIcon,
 } from "@mantine/core";
-import {
-  IconCash,
-  IconReceipt,
-  IconTrendingUp,
-  IconCategory,
-} from "@tabler/icons-react";
+import { IconCash, IconReceipt, IconTrendingUp, IconCategory } from "@tabler/icons-react";
 
 export default function Dashboard() {
   return (

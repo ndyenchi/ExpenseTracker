@@ -8,8 +8,8 @@ import {
   ActionIcon,
   Text,
   Badge,
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import {
   IconHome,
   IconPlus,
@@ -18,14 +18,14 @@ import {
   IconSun,
   IconMoon,
   IconWallet,
-} from '@tabler/icons-react';
-import { Link, useLocation, Outlet } from 'react-router-dom';
+} from "@tabler/icons-react";
+import { Link, useLocation, Outlet } from "react-router-dom";
 
 const navItems = [
-  { icon: IconHome, label: 'Dashboard', to: '/' },
-  { icon: IconPlus, label: 'Add Expense', to: '/add' },
-  { icon: IconList, label: 'Expenses', to: '/expenses' },
-  { icon: IconChartPie, label: 'Statistics', to: '/stats' },
+  { icon: IconHome, label: "Dashboard", to: "/" },
+  { icon: IconPlus, label: "Add Expense", to: "/add" },
+  { icon: IconList, label: "Expenses", to: "/expenses" },
+  { icon: IconChartPie, label: "Statistics", to: "/stats" },
 ];
 
 export function AppLayout() {
@@ -38,7 +38,7 @@ export function AppLayout() {
       header={{ height: 60 }}
       navbar={{
         width: 280,
-        breakpoint: 'sm',
+        breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
       padding="md"
@@ -64,7 +64,7 @@ export function AppLayout() {
               onClick={() => toggleColorScheme()}
               aria-label="Toggle color scheme"
             >
-              {colorScheme === 'dark' ? <IconSun size={20} /> : <IconMoon size={20} />}
+              {colorScheme === "dark" ? <IconSun size={20} /> : <IconMoon size={20} />}
             </ActionIcon>
           </Group>
         </Group>
@@ -86,7 +86,7 @@ export function AppLayout() {
               onClick={close}
               variant="light"
               mb={4}
-              style={{ borderRadius: 'var(--mantine-radius-md)' }}
+              style={{ borderRadius: "var(--mantine-radius-md)" }}
             />
           ))}
         </AppShell.Section>

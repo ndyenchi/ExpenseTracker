@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.yarn/
+
+# Build output
+dist/
+build/
+
+# Cache
+.vite/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package manager
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+*.local.*

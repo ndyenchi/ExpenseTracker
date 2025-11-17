@@ -29,12 +29,7 @@ export default function AddExpense() {
         <Card withBorder padding="xl" radius="md">
           <form>
             <Stack gap="md">
-              <TextInput
-                label="Title"
-                placeholder="e.g., Grocery shopping"
-                required
-                size="md"
-              />
+              <TextInput label="Title" placeholder="e.g., Grocery shopping" required size="md" />
 
               <NumberInput
                 label="Amount"
@@ -73,11 +68,7 @@ export default function AddExpense() {
               />
 
               <Group justify="flex-end" mt="md">
-                <Button
-                  type="submit"
-                  size="md"
-                  leftSection={<IconPlus size={18} />}
-                >
+                <Button type="submit" size="md" leftSection={<IconPlus size={18} />}>
                   Add Expense
                 </Button>
               </Group>
