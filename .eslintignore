@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+.yarn/
+
+# Build output
+dist/
+build/
+
+# Cache
+.vite/
+*.tsbuildinfo
+
+# Config files
+vite.config.ts
+eslint.config.js
+postcss.config.js
+tailwind.config.js
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+*.local.*
