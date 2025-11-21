@@ -3,9 +3,9 @@ import { IconChartPie, IconHome, IconList } from "@tabler/icons-react";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { icon: IconHome, label: "Dashboard", to: "/" },
-  { icon: IconList, label: "Expenses", to: "/expenses" },
-  { icon: IconChartPie, label: "Statistics", to: "/stats" },
+  { icon: IconHome, label: "Tổng quan", to: "/" },
+  { icon: IconList, label: "Giao dịch", to: "/expenses" },
+  { icon: IconChartPie, label: "Thống kê", to: "/stats" },
 ];
 
 export const Navigation = ({ close }: { close: () => void }) => {

@@ -6,9 +6,9 @@ export default function Expense() {
     <Container size="xl">
       <Stack gap="lg">
         <div>
-          <Title order={2}>Expenses</Title>
+          <Title order={2}>Giao dịch</Title>
           <Text c="dimmed" size="sm">
-            View and manage all your expenses
+            Xem và quản lý tất cả các giao dịch thu chi
           </Text>
         </div>
 

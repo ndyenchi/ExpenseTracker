@@ -1,220 +1,89 @@
-📘 EXPENSE TRACKER – REQUIREMENTS
-1. Mục tiêu sản phẩm
+# Expense Tracker
 
-Ứng dụng giúp người dùng:
+A modern web application to help you track and manage your income and expenses easily and intuitively.
 
-Ghi lại các khoản chi tiêu hằng ngày
+## Key Features
 
-Theo dõi tổng chi tiêu theo ngày/tháng
+### Transaction Management
 
-Xem biểu đồ phân bổ chi tiêu theo danh mục
+- Record **income** and **expenses**
+- Categorize by type (Food & Drinks, Living, Salary, Entertainment...)
+- Add, edit, and delete transactions easily
+- Add notes to each transaction
 
-Quản lý dữ liệu cá nhân mà không cần backend, lưu trên localStorage
+### Search and Filter
 
-2. Đối tượng sử dụng
+- Search by title
+- Filter by transaction type (Income/Expense/All)
+- Filter by category
+- Filter by **month** or **custom date range**
 
-Người muốn theo dõi chi tiêu cá nhân
+### Statistics and Reports
 
-Người có nhu cầu quản lý tài chính đơn giản
+- **Dashboard Overview** with:
+- Total income
+- Total expenses
+- Current balance
+- Current month statistics
+- **Pie charts** showing expense/income distribution by category
+- **Trend chart** for the last 6 months
+- **Top categories** for expenses and income
+- **Export data** to CSV file
 
-Không yêu cầu tài khoản đăng nhập
+### User Interface
 
-3. Scope
+- Friendly, modern interface with **Mantine UI**
+- **Dark Mode** support
+- Responsive - compatible with all devices
+- Intuitive colors (green for income, red for expenses)
 
-Ứng dụng gồm các tính năng:
+### Data Storage
 
-CRUD (Create – Read – Update – Delete) chi tiêu
+- Automatically saves to **localStorage**
+- Data persists when browser is closed
 
-Lọc chi tiêu theo tháng, danh mục
+## Technology Stack
 
-Thống kê tổng số tiền
+- **React 19.2.0** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Lightning-fast build tool
+- **Mantine UI** - Component library
+- **Mantine Charts** - Beautiful charts
+- **React Router** - Routing
+- **Day.js** - Date manipulation
+- **LocalStorage** - Data persistence
 
-Biểu đồ Pie Chart phân bổ theo category
+## Installation and Setup
 
-4. Functional Requirements
-4.1. Expense Management
-4.1.1. Tạo mới chi tiêu
+### Requirements
 
-User story:
-Là người dùng, tôi muốn thêm một khoản chi tiêu để theo dõi chi tiêu hằng ngày.
+- Node.js >= 18.0.0
+- npm or yarn
 
-Trường dữ liệu của Expense:
+### Installation
 
-id (string, UUID)
+```bash
+# Clone repository
+git clone <repository-url>
 
-title (string, required)
+# Navigate to project directory
+cd ExpenseTracker
 
-amount (number > 0, required)
+# Install dependencies
+npm install
+```
 
-category (string, required) — Ví dụ:
+### Running the Application
 
-Food & Drinks
+```bash
+# Development mode
+npm run dev
 
-Transportation
+# Build for production
+npm run build
 
-Shopping
+# Preview production build
+npm run preview
+```
 
-Bills
-
-Others
-
-date (ISO date string, required)
-
-note (string, optional)
-
-Validation:
-
-Title không được rỗng
-
-Amount phải > 0
-
-Category phải thuộc danh sách cho phép
-
-Date phải hợp lệ
-
-4.1.2. Xem danh sách chi tiêu
-
-Hiển thị dạng list
-
-Mặc định sort theo date DESC
-
-Mỗi item hiển thị:
-
-title
-
-amount
-
-category
-
-date
-
-4.1.3. Cập nhật chi tiêu
-
-User có thể:
-
-Nhấn "Edit"
-
-Mở modal hoặc form
-
-Thay đổi title, amount, category, date, note
-
-Lưu lại → cập nhật vào localStorage
-
-4.1.4. Xóa chi tiêu
-
-Click "Delete" tại từng item
-
-Xác nhận (Confirm)
-
-Xóa khỏi localStorage
-
-4.2. Filtering & CRUD Enhancements
-4.2.1. Lọc theo tháng
-
-User chọn tháng (Month Picker)
-
-Danh sách và biểu đồ cập nhật theo tháng đó
-
-4.2.2. Lọc theo category
-
-Dropdown category
-
-Danh sách hiển thị theo category được chọn
-
-4.2.3. Tìm kiếm theo tên
-
-Tìm theo title (search input)
-
-Không phân biệt chữ hoa thường
-
-4.3. Statistics / Analytics
-4.3.1. Tổng quan chi tiêu trong tháng
-
-Total Expense
-
-Tổng số giao dịch
-
-Top 3 categories tiêu nhiều nhất
-
-4.3.2. Biểu đồ pie chart theo category
-
-Dùng thư viện:
-
-Recharts
-
-hoặc Chart.js
-
-Hiển thị:
-
-% tổng chi tiêu của từng category
-
-Màu sắc tự động
-
-4.4. Data Storage
-4.4.1. Lưu tất cả dữ liệu vào localStorage
-
-Key: "expenses"
-
-Format:
-
-[
-  {
-    "id": "uuid",
-    "title": "Coffee",
-    "amount": 30000,
-    "category": "Food & Drinks",
-    "date": "2025-11-13",
-    "note": ""
-  }
-]
-
-4.4.2. Tự động load dữ liệu khi mở app
-
-Nếu localStorage rỗng: hiển thị empty state.
-
-5. Non-Functional Requirements
-5.1. Performance
-
-UI load dưới 0.5s
-
-Sort + filter thực hiện trên client (array operations)
-
-5.2. UI/UX
-
-Form tạo mới đơn giản, dễ sử dụng
-
-Dark mode (optional nhưng đẹp)
-
-Dùng Mantine hoặc Shadcn UI
-
-5.3. Responsive
-
-Mobile-first
-
-List + Chart hiển thị tốt trên màn hình nhỏ
-
-6. Optional Features (Nâng cấp nếu có thời gian)
-⭐ 1. Export CSV
-⭐ 2. Biểu đồ dạng line chart theo ngày trong tháng
-⭐ 3. Budget limit (đặt hạn mức chi tiêu)
-⭐ 4. Notification khi vượt mức
-⭐ 5. Import/Export JSON backup
-7. Minimum Viable Product (MVP)
-
-Để đưa vào portfolio nhanh nhất, MVP gồm:
-
-✔ Add/Edit/Delete expense
-✔ Filter theo tháng
-✔ Total expense
-✔ Biểu đồ Pie Chart theo category
-✔ Lưu localStorage
-✔ UI đẹp (Mantine / Shadcn / Tailwind)
-
-Hoàn thành trong 1–2 ngày.
-
-Nếu bạn muốn, mình có thể viết tiếp cho bạn:
-✅ kiến trúc thư mục project
-✅ danh sách component
-✅ mock UI (wireframe)
-✅ data type + Zod schema
-➡️ Bạn muốn mình chuẩn bị phần nào tiếp theo?
+Open your browser at: **http://localhost:5173/**
