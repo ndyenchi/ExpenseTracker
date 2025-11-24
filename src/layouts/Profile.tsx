@@ -16,10 +16,10 @@ export const Profile = () => {
                 YC
               </Avatar>
               <div>
-                <Text size="sm" fw={500} color="white">
+                <Text size="sm" fw={500}>
                   Yen Chi
                 </Text>
-                <Text size="xs" color="dimmed">
+                <Text size="xs" c="dimmed">
                   yenchi@email.com
                 </Text>
               </div>
