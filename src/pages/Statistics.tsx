@@ -290,7 +290,7 @@ export default function Statistics() {
                   { name: "Thu nhập", color: "green.6" },
                   { name: "Chi tiêu", color: "red.6" },
                 ]}
-                curveType="natural"
+                curveType="monotone"
                 withLegend
                 withDots
                 withYAxis

@@ -84,7 +84,7 @@ const FormExpense = ({ onClose, defaultType = "expense", transaction }: FormExpe
       amount: values.amount,
       type: transactionType,
       category: values.category as Transaction["category"],
-      date: values.date.toISOString().split("T")[0],
+      date: new Date(values.date).toISOString().split("T")[0],
       note: values.note || undefined,
     };
 

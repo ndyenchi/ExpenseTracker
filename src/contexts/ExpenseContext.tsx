@@ -56,10 +56,8 @@ export const TransactionProvider = ({ children }: TransactionProviderProps) => {
   useEffect(() => {
     try {
       const storedData = localStorage.getItem(TRANSACTIONS_STORAGE_KEY);
-      console.log("📥 Loading transactions from localStorage:", storedData);
       if (storedData) {
         const parsedData = JSON.parse(storedData);
-        console.log("✅ Loaded transactions:", parsedData);
         setTransactions(parsedData);
       } else {
         console.log("ℹ️ No transactions found in localStorage");
@@ -88,9 +86,7 @@ export const TransactionProvider = ({ children }: TransactionProviderProps) => {
     if (!isLoaded) return; // Don't save on initial mount
 
     try {
-      console.log("💾 Saving transactions to localStorage:", transactions);
       localStorage.setItem(TRANSACTIONS_STORAGE_KEY, JSON.stringify(transactions));
-      console.log("✅ Transactions saved successfully");
     } catch (error) {
       console.error("❌ Failed to save transactions to localStorage:", error);
     }
